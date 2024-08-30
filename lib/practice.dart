@@ -32,121 +32,126 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var emailText = TextEditingController();
-  var passText = TextEditingController();
-  var phonText = TextEditingController();
+  // var emailText = TextEditingController();
+  // var passText = TextEditingController();
+  // var phonText = TextEditingController();
 
 
   @override
   Widget build(BuildContext context) {
 
     //var arrname = ['Bhoomi','Shital','Nayan','Hardik','Vivan'];
-
+var time = DateTime.now();
     return Scaffold(
         appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Text('Flutter container'),
+         title: Text('Flutter container'),
     ),
 
-      body: Center(
-          child: Container(
-              width: 300,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextField(
-                    keyboardType: TextInputType.emailAddress,
-                    controller: emailText,
-                    //enabled: false,
-                   decoration: InputDecoration(
-                     hintText: 'Enter Email',
-                     focusedBorder: OutlineInputBorder(
-                         borderRadius: BorderRadius.circular(20),
-                         borderSide: BorderSide(
-                             color: Colors.orange
-                         )
-                     ),
-                     enabledBorder: OutlineInputBorder(
-                         borderRadius: BorderRadius.circular(20),
-                         borderSide: BorderSide(
-                             color: Colors.blueAccent
-                         )
-                     ),
-                     disabledBorder: OutlineInputBorder(
-                         borderRadius: BorderRadius.circular(20),
-                         borderSide: BorderSide(
-                             color: Colors.black
-                         )
-                     ),
-                    // suffixText: "Username Exist",
+      body:
 
-                     prefixIcon: Icon(Icons.email,color: Colors.orange),
-                     border: OutlineInputBorder(
-                       borderRadius: BorderRadius.circular(20),
-                       borderSide: BorderSide(
-                         color: Colors.orange
-                       )
-                     )
-                            ),
-                  ),
-                  Container(
-                    height: 11,
-                  ),
-                  TextField(
-                    controller: passText,
-                      obscureText: true,
-                      obscuringCharacter: '*',
-                      decoration: InputDecoration(
-                        hintText: 'Enter password',
-                          prefixIcon: IconButton(
-                          icon: Icon(Icons.remove_red_eye,color: Colors.orange,),
-                          onPressed:(){
-                          }
-                      ),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                              borderSide: BorderSide(
-                                  color: Colors.orange
-                              )
-                          )
-                      ),
-                    ),
-                  Container(
-                    height: 11,
-                  ),
-                  TextField(
-                    keyboardType: TextInputType.phone,
-                    controller: phonText,
-                    decoration: InputDecoration(
-                        hintText: 'Enter mobile no',
-                        prefixIcon: IconButton(
-                            icon: Icon(Icons.phone,color: Colors.orange,),
-                            onPressed:(){
-                            }
-                        ),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(
-                                color: Colors.orange
-                            )
-                        )
-                    ),
-                  ),
-                  Container(
-                    height: 11,
-                  ),
-                  ElevatedButton(onPressed: (){
-                    String uEmail = emailText.text.toString();
-                    String uPass  = passText.text.toString();
-                    
-                    print("Email: $uEmail,Pass: $uPass");
-                  },
-                      child: Text('login')
-                  )
-                ],
-              )
-          )
-      )
+      Text('Current Time : $time',style: TextStyle(fontSize: 25),
+      ),
+
+      // Center(
+      //     child: Container(
+      //         width: 300,
+      //         child: Column(
+      //           mainAxisAlignment: MainAxisAlignment.center,
+      //           children: [
+      //             TextField(
+      //               keyboardType: TextInputType.emailAddress,
+      //               controller: emailText,
+      //               //enabled: false,
+      //              decoration: InputDecoration(
+      //                hintText: 'Enter Email',
+      //                focusedBorder: OutlineInputBorder(
+      //                    borderRadius: BorderRadius.circular(20),
+      //                    borderSide: BorderSide(
+      //                        color: Colors.orange
+      //                    )
+      //                ),
+      //                enabledBorder: OutlineInputBorder(
+      //                    borderRadius: BorderRadius.circular(20),
+      //                    borderSide: BorderSide(
+      //                        color: Colors.blueAccent
+      //                    )
+      //                ),
+      //                disabledBorder: OutlineInputBorder(
+      //                    borderRadius: BorderRadius.circular(20),
+      //                    borderSide: BorderSide(
+      //                        color: Colors.black
+      //                    )
+      //                ),
+      //               // suffixText: "Username Exist",
+      //
+      //                prefixIcon: Icon(Icons.email,color: Colors.orange),
+      //                border: OutlineInputBorder(
+      //                  borderRadius: BorderRadius.circular(20),
+      //                  borderSide: BorderSide(
+      //                    color: Colors.orange
+      //                  )
+      //                )
+      //                       ),
+      //             ),
+      //             Container(
+      //               height: 11,
+      //             ),
+      //             TextField(
+      //               controller: passText,
+      //                 obscureText: true,
+      //                 obscuringCharacter: '*',
+      //                 decoration: InputDecoration(
+      //                   hintText: 'Enter password',
+      //                     prefixIcon: IconButton(
+      //                     icon: Icon(Icons.remove_red_eye,color: Colors.orange,),
+      //                     onPressed:(){
+      //                     }
+      //                 ),
+      //                     border: OutlineInputBorder(
+      //                         borderRadius: BorderRadius.circular(20),
+      //                         borderSide: BorderSide(
+      //                             color: Colors.orange
+      //                         )
+      //                     )
+      //                 ),
+      //               ),
+      //             Container(
+      //               height: 11,
+      //             ),
+      //             TextField(
+      //               keyboardType: TextInputType.phone,
+      //               controller: phonText,
+      //               decoration: InputDecoration(
+      //                   hintText: 'Enter mobile no',
+      //                   prefixIcon: IconButton(
+      //                       icon: Icon(Icons.phone,color: Colors.orange,),
+      //                       onPressed:(){
+      //                       }
+      //                   ),
+      //                   border: OutlineInputBorder(
+      //                       borderRadius: BorderRadius.circular(20),
+      //                       borderSide: BorderSide(
+      //                           color: Colors.orange
+      //                       )
+      //                   )
+      //               ),
+      //             ),
+      //             Container(
+      //               height: 11,
+      //             ),
+      //             ElevatedButton(onPressed: (){
+      //               String uEmail = emailText.text.toString();
+      //               String uPass  = passText.text.toString();
+      //
+      //               print("Email: $uEmail,Pass: $uPass");
+      //             },
+      //                 child: Text('login')
+      //             )
+      //           ],
+      //         )
+      //     )
+      // )
 
       // Center(
       //     child:
